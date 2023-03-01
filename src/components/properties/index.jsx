@@ -1,5 +1,11 @@
 import React from "react";
+import { Container } from "../home/style";
 
 export const Preporties = () => {
-  return <div>Preporties</div>;
+  return (
+    <>
+      <Container>hello</Container>
+    </>
+  );
 };
+export default Preporties;

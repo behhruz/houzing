@@ -1,6 +1,5 @@
 import React from "react";
+import Preporties from "../../components/properties";
 
-export const PropertiesPage = () => {
-  return <div>Properties</div>;
-};
+export const PropertiesPage = () => <Preporties />;
 export default PropertiesPage;

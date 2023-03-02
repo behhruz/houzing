@@ -4,7 +4,7 @@ import { Container } from "./style";
 export const Home = () => {
   return (
     <>
-      <Container>Beha</Container>
+      <Container>Behaj</Container>
     </>
   );
 };

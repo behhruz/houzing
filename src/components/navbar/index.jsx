@@ -12,8 +12,8 @@ export const Navbar = () => {
           <Logo /> <h3>Houzing </h3>
         </Section>
         <Section>
-          {NavbarUttils.map(({ title, path }) => {
-            return <Links to={path}>{title}</Links>;
+          {NavbarUttils.map(({ title, path,id }) => {
+            return <Links key={id} to={path} className={({isActive})=>isActive && 'active'}>{title}</Links>;
           })}
         </Section>
         <Section>1</Section>

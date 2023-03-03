@@ -10,14 +10,23 @@ const Wrapper = styled.div`
   justify-content: space-between;
   font-size: 16px;
   height: 64px;
+  max-width: 1440px;
 `;
 const Section = styled.nav`
   display: flex;
   align-items: center;
   cursor: ${({ logo }) => logo && "pointer"};
+
+  .active {
+    color: #b8ff06;
+  }
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 const Logo = styled(logoImg)`
   width: 30px;
   margin-right: 12px;

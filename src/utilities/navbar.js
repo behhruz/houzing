@@ -2,7 +2,7 @@ import useUniqueId from "../hooks/useId";
 import HomePage from "../pages/home";
 import PropertiesPage from "../pages/properties";
 
-const Navbar = [
+const NavbarUttils = [
   {
     id: useUniqueId,
     title: "Home",
@@ -21,4 +21,4 @@ const Navbar = [
   },
 ];
 
-export default Navbar;
+export default NavbarUttils;

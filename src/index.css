@@ -14,5 +14,8 @@ body {
   --colorSecond: #696969;
 
   /* background-color */
-  --backgroundPrimary:#0061df;
+  --backgroundPrimary: #0061df;
+
+  /* padding */
+  --padding: 0 130px;
 }

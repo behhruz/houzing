@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as logoImg } from "../../assets/icons/logo.svg";
 const Wrapper = styled.div`
-  background-color: var(--colorPrimary);
+ 
   color: white;
   padding: var(--padding);
   display: flex;
@@ -26,6 +26,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--colorPrimary);
 `;
 const Logo = styled(logoImg)`
   width: 30px;
@@ -51,4 +57,4 @@ const Button = styled.button`
   }
 `;
 
-export { Container, Section, Wrapper, Logo, Links, Button };
+export { Container, Section, Wrapper, Logo, Links, Button, Main };

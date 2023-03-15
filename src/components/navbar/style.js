@@ -45,16 +45,6 @@ const Links = styled(NavLink)`
   padding: 0 32px;
   color: white;
 `;
-const Button = styled.button`
-  width: 120px;
-  height: 44px;
-  background-color: var(--colorPrimary);
-  border: 1px solid #ffff;
-  color: #ffff;
-  &:active {
-    color: #b8ff06;
-    border: 1px solid #b8ff06;
-  }
-`;
 
-export { Container, Section, Wrapper, Logo, Links, Button, Main };
+
+export { Container, Section, Wrapper, Logo, Links, Main };

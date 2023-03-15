@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
+import { GenericButton, Buttonn } from "../generic/button/style";
 
-export const index = () => {
+export const Button = ({ children, type, onClick }) => {
   return (
-    <div>index</div>
-  )
-}
+    <>
+      <GenericButton onClick={onClick} type={type}>
+        Login
+      </GenericButton>
+    </>
+  );
+};
+export default Button;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import NavbarUttils from "../../utilities/navbar";
-import {Button} from "../generic/button";
+import { Button } from "../generic/index";
 import { Container, Links, Logo, Main, Section, Wrapper } from "./style";
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -26,7 +26,9 @@ export const Navbar = () => {
             })}
           </Section>
           <Section>
-            <Button>HEllo</Button>
+            <Button onClick={() => navigate("/signin")} type={"dark"}>
+              Sign in
+            </Button>
           </Section>
         </Wrapper>
       </Main>

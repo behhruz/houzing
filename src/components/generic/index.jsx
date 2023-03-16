@@ -5,7 +5,7 @@ export const Button = ({ children, type, onClick }) => {
   return (
     <>
       <GenericButton onClick={onClick} type={type}>
-        Login
+        Login out
       </GenericButton>
     </>
   );

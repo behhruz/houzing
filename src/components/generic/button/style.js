@@ -38,7 +38,7 @@ const GenericButton = styled.button`
   height: ${({ height }) => (height ? `${height}px` : "44px")};
   width: ${({ width }) => (width ? `${width}px` : "120px")};
   border-radius: 2px;
-  min-width: 120px;
+  min-width: 121px;
   font-size: 14px;
   cursor: pointer;
   ${GetType}

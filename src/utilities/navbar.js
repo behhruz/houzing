@@ -19,6 +19,14 @@ const NavbarUttils = [
     hidden: false,
     element: <PropertiesPage />,
   },
+  {
+    id: useUniqueId,
+    title: "Sign In",
+    path: "/signin",
+    private: false,
+    hidden: false,
+    element: <h1>Generic Sign In</h1>,
+  },
 ];
 
 export default NavbarUttils;

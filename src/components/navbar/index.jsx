@@ -13,15 +13,17 @@ export const Navbar = () => {
             <Logo /> <h3>Houzing </h3>
           </Section>
           <Section>
-            {NavbarUttils.map(({ title, path }, index) => {
+            {NavbarUttils.map(({ title, path, hidden }, index) => {
               return (
-                <Links
-                  key={index}
-                  to={path}
-                  className={({ isActive }) => isActive && "active"}
-                >
-                  {title}
-                </Links>
+                !hidden && (
+                  <Links
+                    key={index}
+                    to={path}
+                    className={({ isActive }) => isActive && "active"}
+                  >
+                    {title}
+                  </Links>
+                )
               );
             })}
           </Section>

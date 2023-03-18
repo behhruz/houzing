@@ -24,7 +24,7 @@ const NavbarUttils = [
     title: "Sign In",
     path: "/signin",
     private: false,
-    hidden: false,
+    hidden: true,
     element: <h1>Generic Sign In</h1>,
   },
 ];

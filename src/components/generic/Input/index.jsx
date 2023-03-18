@@ -1,5 +1,5 @@
 import React from "react";
-import { GenericButton, Buttonn } from "./style";
+import { GenericInput, Buttonn } from "./style";
 export const GenericInputs = ({
   type,
   onChange,
@@ -9,10 +9,12 @@ export const GenericInputs = ({
   defaultValue,
   width,
   height,
+  icon,
 }) => {
   return (
     <>
-      <GenericButton
+      <GenericInput
+        icon={icon}
         name={name}
         placeholder={placeholder}
         onChange={onChange}

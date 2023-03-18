@@ -7,7 +7,7 @@ export const Home = () => {
     <>
       <Container>
         <h1>home</h1>
-        <GenericInputs width={400} placeholder={'test'}/>
+       
       </Container>
     </>
   );

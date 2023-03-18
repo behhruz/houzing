@@ -30,7 +30,7 @@ const GetType = ({ type }) => {
   }
 };
 
-const GenericButton = styled.input`
+const GenericInput = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +42,7 @@ const GenericButton = styled.input`
   min-width: 121px;
   font-size: 14px;
   outline: none;
+  padding-left: ${({ icon }) => (icon ? "50px" : "20px")};
 `;
 
-export { GenericButton };
+export { GenericInput };

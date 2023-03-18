@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import NavbarUttils from "../../utilities/navbar";
-import { Button } from "../generic/index";
+import { Button } from "../generic/button/index";
 import { Container, Links, Logo, Main, Section, Wrapper } from "./style";
 export const Navbar = () => {
   const navigate = useNavigate();

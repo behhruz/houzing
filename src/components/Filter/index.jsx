@@ -12,7 +12,7 @@ export const Filter = () => {
         />
         <Button type={"light"}>
           {" "}
-          <Icons.filterIcon /> Advanced
+          <Icons.filterIcon /> Advancedd
         </Button>
         <Button type={"primary"}>
           <Icons.searchIcon /> Search

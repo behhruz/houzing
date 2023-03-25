@@ -16,9 +16,15 @@ Icons.houseIcon = styled(HouseIcon)`
 `;
 Icons.searchIcon = styled(SearchIcon)`
   margin-right: 8px;
+
+path{
+  color: red;
+}
+fill: red;
 `;
 Icons.filterIcon = styled(FilterIcon)`
   margin-right: 8px;
+
 `;
 
 export { Container, Icons };

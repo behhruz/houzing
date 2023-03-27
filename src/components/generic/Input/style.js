@@ -42,7 +42,16 @@ const GenericInput = styled.input`
   min-width: 121px;
   font-size: 14px;
   outline: none;
-  padding-left: ${({ icon }) => (icon ? "50px" : "20px")};
+  padding-left: ${({ icon }) => (icon ? "35px" : "20px")};
 `;
-
-export { GenericInput };
+const Wrapper = styled.div`
+  width: ${({ width }) => (width ? `${width}px` : "100%")};
+  display: flex;
+  align-items: center; 
+  position: relative;
+`;
+const Icon = styled.div`
+  position: absolute;
+  margin: 0 10px;
+`;
+export { GenericInput, Wrapper, Icon };

@@ -1,5 +1,5 @@
 import React from "react";
-import { GenericInput, Buttonn } from "./style";
+import { GenericInput, Buttonn, Wrapper, Icon } from "./style";
 export const GenericInputs = ({
   type,
   onChange,
@@ -10,20 +10,26 @@ export const GenericInputs = ({
   width,
   height,
   icon,
+  prefix,
 }) => {
   return (
     <>
-      <GenericInput
-        icon={icon}
-        name={name}
-        placeholder={placeholder}
-        onChange={onChange}
-        type={type}
-        value={value}
-        defaultValue={defaultValue}
-        width={width}
-        height={height}
-      />
+      <Wrapper>
+        {" "}
+        <Icon>{icon}</Icon>
+        <GenericInput
+          prefix={prefix}
+          icon={icon}
+          name={name}
+          placeholder={placeholder}
+          onChange={onChange}
+          type={type}
+          value={value}
+          defaultValue={defaultValue}
+          width={width}
+          height={height}
+        />
+      </Wrapper>
     </>
   );
 };

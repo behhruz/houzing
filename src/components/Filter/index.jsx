@@ -5,6 +5,17 @@ import { Container, Icons } from "./style";
 import { Dropdown } from "antd";
 
 export const Filter = () => {
+  const items = [
+    {
+      key: "1",
+      label: (
+        <div style={{ display: "flex", gap: "21px" }}>
+          <Button />
+          <Button />
+        </div>
+      ),
+    },
+  ];
   return (
     <>
       <Container>
@@ -17,16 +28,11 @@ export const Filter = () => {
         </Button>
         <Dropdown
           trigger={["click"]}
-          menu={
-            { <div>
-              <h1>test</h1>
-            </div>}
-           
-          }
+          menu={{ items }}
           placement="bottomRight"
           arrow={{ pointAtCenter: true }}
         >
-          abvg
+          <Button />
         </Dropdown>
       </Container>
     </>

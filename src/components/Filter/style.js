@@ -17,14 +17,29 @@ Icons.houseIcon = styled(HouseIcon)`
 Icons.searchIcon = styled(SearchIcon)`
   margin-right: 8px;
 
-path{
-  color: red;
-}
-fill: red;
+  path {
+    color: red;
+  }
+  fill: red;
 `;
 Icons.filterIcon = styled(FilterIcon)`
   margin-right: 8px;
-
 `;
-
-export { Container, Icons };
+const MenuWrapper = styled.div``;
+const Section = styled.div``;
+const TextBox = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+const InputBox = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+  /* max-width: 183px; */
+`;
+const Section1 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+`;
+export { Container, Icons, MenuWrapper, Section, Section1, TextBox, InputBox };

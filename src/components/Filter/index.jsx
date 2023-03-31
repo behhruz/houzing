@@ -1,21 +1,58 @@
 import React from "react";
 import { GenericInputs } from "../generic/Input";
 import { Button } from "../generic/button/index";
-import { Container, Icons } from "./style";
+import {
+  Container,
+  Icons,
+  InputBox,
+  MenuWrapper,
+  Section,
+  Section1,
+  TextBox,
+} from "./style";
 import { Dropdown } from "antd";
 
 export const Filter = () => {
-  const items = [
-    {
-      key: "1",
-      label: (
-        <div style={{ display: "flex", gap: "21px" }}>
+  const menu = (
+    <MenuWrapper>
+      <Section>
+        <TextBox>
+          <h2>Address</h2>
+        </TextBox>
+        <InputBox>
+          <GenericInputs placeholder={"Country"} />
+          <GenericInputs placeholder={"Region"} />
+          <GenericInputs placeholder={"City"} />
+          <GenericInputs placeholder={"Zip Code"} />
+        </InputBox>
+      </Section>
+      <Section>
+        <TextBox>
+          <h2>Apartment info</h2>
+        </TextBox>
+        <InputBox>
+          <GenericInputs placeholder={"Rooms"} />
+          <GenericInputs placeholder={"Size"} />
+          <GenericInputs placeholder={"Sort"} />
+        </InputBox>
+      </Section>
+      <Section>
+        <TextBox>
+          <h2>Price</h2>
+        </TextBox>
+        <InputBox>
+          <GenericInputs placeholder={"Prise"} />
+          <GenericInputs placeholder={"Max Prise"} />
+        </InputBox>
+      </Section>
+      <Section1 box>
+        <TextBox>
+          <Button type='light' />
           <Button />
-          <Button />
-        </div>
-      ),
-    },
-  ];
+        </TextBox>
+      </Section1>
+    </MenuWrapper>
+  );
   return (
     <>
       <Container>
@@ -23,17 +60,20 @@ export const Filter = () => {
           icon={<Icons.houseIcon />}
           placeholder="Enter an address, neighborhood, city, or ZIP code"
         />
-        <Button type="light">
-          <Icons.filterIcon /> Advanced
-        </Button>
         <Dropdown
           trigger={["click"]}
-          menu={{ items }}
+          overlay={menu}
           placement="bottomRight"
           arrow={{ pointAtCenter: true }}
         >
-          <Button />
-        </Dropdown>
+          <Button type="light">
+            <Icons.filterIcon /> Advanced
+          </Button>
+        </Dropdown>{" "}
+        <Button>
+          <Icons.searchIcon />
+          Search
+        </Button>
       </Container>
     </>
   );

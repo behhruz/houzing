@@ -47,7 +47,7 @@ const GenericInput = styled.input`
 const Wrapper = styled.div`
   width: ${({ width }) => (width ? `${width}px` : "100%")};
   display: flex;
-  align-items: center; 
+  align-items: center;
   position: relative;
 `;
 const Icon = styled.div`

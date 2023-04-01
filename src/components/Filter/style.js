@@ -25,7 +25,10 @@ Icons.searchIcon = styled(SearchIcon)`
 Icons.filterIcon = styled(FilterIcon)`
   margin-right: 8px;
 `;
-const MenuWrapper = styled.div``;
+const MenuWrapper = styled.div`
+  padding: 20px 30px;
+  background-color: red;
+`;
 const Section = styled.div``;
 const TextBox = styled.div`
   display: flex;
@@ -37,10 +40,5 @@ const InputBox = styled.div`
   margin-bottom: 10px;
   /* max-width: 183px; */
 `;
-const Section1 = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-  
-`;
-export { Container, Icons, MenuWrapper, Section, Section1, TextBox, InputBox };
+
+export { Container, Icons, MenuWrapper, Section,  TextBox, InputBox };

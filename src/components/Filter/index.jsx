@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GenericInputs } from "../generic/Input";
 import { Button } from "../generic/button/index";
 import {
@@ -13,6 +13,15 @@ import {
 import { Dropdown } from "antd";
 
 export const Filter = () => {
+  const CountryRef = useRef();
+  const RegionRef = useRef();
+  const CityRef = useRef();
+  const ZipCodeRef = useRef();
+  const RoomsRef = useRef();
+  const SizeRef = useRef();
+  const SortRef = useRef();
+  const PriceRef = useRef();
+  const MaxPriceRef = useRef();
   const menu = (
     <MenuWrapper>
       <Section>
@@ -20,10 +29,10 @@ export const Filter = () => {
           <h1 className="subTitle">Address</h1>
         </TextBox>
         <InputBox>
-          <GenericInputs placeholder={"Country"} />
-          <GenericInputs placeholder={"Region"} />
-          <GenericInputs placeholder={"City"} />
-          <GenericInputs placeholder={"Zip Code"} />
+          <GenericInputs ref={CountryRef} placeholder={"Country"} />
+          <GenericInputs ref={RegionRef} placeholder={"Region"} />
+          <GenericInputs ref={CityRef} placeholder={"City"} />
+          <GenericInputs ref={ZipCodeRef} placeholder={"Zip Code"} />
         </InputBox>
       </Section>
       <Section>
@@ -31,9 +40,9 @@ export const Filter = () => {
           <h2 className="subTitle">Apartment info</h2>
         </TextBox>
         <InputBox>
-          <GenericInputs placeholder={"Rooms"} />
-          <GenericInputs placeholder={"Size"} />
-          <GenericInputs placeholder={"Sort"} />
+          <GenericInputs ref={RoomsRef} placeholder={"Rooms"} />
+          <GenericInputs ref={SizeRef} placeholder={"Size"} />
+          <GenericInputs ref={SortRef} placeholder={"Sort"} />
         </InputBox>
       </Section>
       <Section>
@@ -41,16 +50,10 @@ export const Filter = () => {
           <h2 className="subTitle">Price</h2>
         </TextBox>
         <InputBox>
-          <GenericInputs placeholder={"Price"} />
-          <GenericInputs placeholder={"Max Price"} />
+          <GenericInputs ref={PriceRef} placeholder={"Price"} />
+          <GenericInputs ref={MaxPriceRef} placeholder={"Max Price"} />
         </InputBox>
       </Section>
-      <Section1 box>
-        <TextBox>
-          <Button type="light" />
-          <Button />
-        </TextBox>
-      </Section1>
     </MenuWrapper>
   );
   return (

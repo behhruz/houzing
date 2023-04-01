@@ -41,5 +41,6 @@ const Section1 = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+  
 `;
 export { Container, Icons, MenuWrapper, Section, Section1, TextBox, InputBox };

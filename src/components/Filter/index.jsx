@@ -17,7 +17,7 @@ export const Filter = () => {
     <MenuWrapper>
       <Section>
         <TextBox>
-          <h2>Address</h2>
+          <h1 className="subTitle">Address</h1>
         </TextBox>
         <InputBox>
           <GenericInputs placeholder={"Country"} />
@@ -28,7 +28,7 @@ export const Filter = () => {
       </Section>
       <Section>
         <TextBox>
-          <h2>Apartment info</h2>
+          <h2 className="subTitle">Apartment info</h2>
         </TextBox>
         <InputBox>
           <GenericInputs placeholder={"Rooms"} />
@@ -38,16 +38,16 @@ export const Filter = () => {
       </Section>
       <Section>
         <TextBox>
-          <h2>Price</h2>
+          <h2 className="subTitle">Price</h2>
         </TextBox>
         <InputBox>
-          <GenericInputs placeholder={"Prise"} />
-          <GenericInputs placeholder={"Max Prise"} />
+          <GenericInputs placeholder={"Price"} />
+          <GenericInputs placeholder={"Max Price"} />
         </InputBox>
       </Section>
       <Section1 box>
         <TextBox>
-          <Button type='light' />
+          <Button type="light" />
           <Button />
         </TextBox>
       </Section1>

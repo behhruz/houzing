@@ -1,13 +1,13 @@
 import React from "react";
-import { GenericInputs } from "../generic/Input";
+import GenericCarousel from "../Carousel";
 import { Container } from "./style";
+
 
 export const Home = () => {
   return (
     <>
       <Container>
-        <h1>home</h1>
-       
+        <GenericCarousel />
       </Container>
     </>
   );

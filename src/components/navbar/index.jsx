@@ -11,7 +11,7 @@ export const Navbar = () => {
       <Main>
         <Wrapper>
           <Section logo onClick={() => navigate("/home")}>
-            <Logo /> <h3 style={{ 'marginTop': "10px" }}>Houzing </h3>
+            <Logo /> <h3 style={{ marginTop: "10px" }}>Houzing </h3>
           </Section>
           <Section>
             {NavbarUttils.map(({ title, path, hidden }, index) => {
@@ -35,9 +35,8 @@ export const Navbar = () => {
           </Section>
         </Wrapper>
       </Main>
-
-      <Outlet />
       <Filter />
+      <Outlet />
     </Container>
   );
 };

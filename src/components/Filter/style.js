@@ -38,7 +38,6 @@ const InputBox = styled.div`
   display: flex;
   gap: 20px;
   margin-bottom: 10px;
-  /* max-width: 183px; */
 `;
 
-export { Container, Icons, MenuWrapper, Section,  TextBox, InputBox };
+export { Container, Icons, MenuWrapper, Section, TextBox, InputBox };

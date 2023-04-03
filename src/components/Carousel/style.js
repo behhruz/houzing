@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
+import { ReactComponent as Beds } from "../../assets/icons/bed.svg";
+import { ReactComponent as Bath } from "../../assets/icons/bath.svg";
+import { ReactComponent as Garage } from "../../assets/icons/car.svg";
+import { ReactComponent as Metr } from "../../assets/icons/ruler.svg";
+
 const Container = styled.div`
   height: 62vh;
   position: relative;
@@ -23,6 +28,10 @@ const ArrowIcon = styled(Arrow)`
   }
   z-index: 6;
 `;
+const BedsIcon = styled(Beds)``;
+const BathIcon = styled(Bath)``;
+const GarageIcon = styled(Garage)``;
+const TriangleIcon = styled(Metr)``;
 const Img = styled.img`
   width: 100%;
 `;
@@ -63,8 +72,18 @@ const Text1 = styled.p`
   line-height: 24px;
   color: white;
 `;
-const BoxIcons = styled.div``;
-const WrapperIcons = styled.div``;
+const WrapperIcons = styled.div`
+display: flex;
+gap: 18px;
+`;
+const BoxIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+
 export {
   Container,
   ArrowIcon,
@@ -75,4 +94,8 @@ export {
   Text1,
   BoxIcons,
   WrapperIcons,
+  BedsIcon,
+  BathIcon,
+  GarageIcon,
+  TriangleIcon,
 };

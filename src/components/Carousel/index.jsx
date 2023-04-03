@@ -1,5 +1,20 @@
 import React, { useRef } from "react";
-import { ArrowIcon, Blur, Container, Content, Img, Text, Text1 } from "./style";
+import {
+  ArrowIcon,
+  BathIcon,
+  BedsIcon,
+  Blur,
+  BoxIcons,
+  Container,
+  Content,
+  GarageIcon,
+  Img,
+  Text,
+  Text1,
+  TriangleIcon,
+  WrapperIcons,
+} from "./style";
+
 import { Carousel } from "antd";
 import Img1 from "../../assets/img/house1.png";
 import Img2 from "../../assets/img/house2.png";
@@ -30,6 +45,24 @@ export const GenericCarousel = () => {
       <Content>
         <Text>Skyper Pool Partment</Text>
         <Text1>112 Glenwood Ave Hyde Park, Boston, MA</Text1>
+        <WrapperIcons>
+          <BoxIcons>
+            <BedsIcon />
+            <Text1>4 beds</Text1>
+          </BoxIcons>
+          <BoxIcons>
+            <BathIcon />
+            <Text1>5 Baths</Text1>
+          </BoxIcons>
+          <BoxIcons>
+            <GarageIcon />
+            <Text1> 1 Garage</Text1>
+          </BoxIcons>
+          <BoxIcons>
+            <TriangleIcon />
+            <Text1>1200 Sq Ft</Text1>
+          </BoxIcons>
+        </WrapperIcons>
       </Content>
       <Blur />
       <ArrowIcon onClick={onMove} data-name="right" name="right" />

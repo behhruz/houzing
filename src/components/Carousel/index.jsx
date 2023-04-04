@@ -18,6 +18,8 @@ import {
 import { Carousel } from "antd";
 import Img1 from "../../assets/img/house1.png";
 import Img2 from "../../assets/img/house2.png";
+import { GenericButton } from "../generic/button/style";
+import Button from "../generic/button";
 
 export const GenericCarousel = () => {
   const slider = useRef();
@@ -63,6 +65,7 @@ export const GenericCarousel = () => {
             <Text1>1200 Sq Ft</Text1>
           </BoxIcons>
         </WrapperIcons>
+        <Button type="dark" width={150}>Read more</Button>
       </Content>
       <Blur />
       <ArrowIcon onClick={onMove} data-name="right" name="right" />

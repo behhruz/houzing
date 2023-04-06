@@ -4,7 +4,7 @@ const Container = styled.div`
   background: #ffffff;
   border: 1px solid red;
   border-radius: 3px;
-  width: 380px;
+  width: 381px;
   height: 429px;
 `;
 

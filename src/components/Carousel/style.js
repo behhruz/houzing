@@ -6,7 +6,6 @@ import { ReactComponent as Garage } from "../../assets/icons/car.svg";
 import { ReactComponent as Metr } from "../../assets/icons/ruler.svg";
 
 const Container = styled.div`
-  height: 62vh;
   position: relative;
 `;
 const ArrowIcon = styled(Arrow)`
@@ -34,8 +33,10 @@ const GarageIcon = styled(Garage)``;
 const TriangleIcon = styled(Metr)``;
 const Img = styled.img`
   width: 100%;
+  height: 100%;
 `;
 const Blur = styled.div`
+  height: 100% -;
   position: absolute;
   top: 0;
   bottom: 0;

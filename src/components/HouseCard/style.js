@@ -6,6 +6,7 @@ const Container = styled.div`
   border-radius: 3px;
   width: 381px;
   height: 429px;
+  margin: 0 auto;
 `;
 
 const Img = styled.img`
@@ -26,4 +27,4 @@ Details.Item = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export { Container, Img, Content,Details };
+export { Container, Img, Content, Details };

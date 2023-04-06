@@ -8,7 +8,11 @@ export const Home = () => {
     <>
       <Container>
         <GenericCarousel />
-        <HouseCard />
+        <div style={{display:'flex'}}>
+          <HouseCard />
+          <HouseCard />
+          <HouseCard />
+        </div>
       </Container>
     </>
   );

@@ -11,7 +11,7 @@ import {
   Liner,
 } from "./style";
 import NoImg from "../../assets/img/noimg.jpeg";
-export const HouseCard = ({ url, title, info }) => {
+export const HouseCard = ({ url, title, info,bed,bath,garage,ruller }) => {
   return (
     <Container>
       <Img src={url || NoImg} />
@@ -22,22 +22,22 @@ export const HouseCard = ({ url, title, info }) => {
         <Details>
           <Details.Item>
             <Icons.Beds />
-            <Info>Bed 1</Info>
+            <Info>Bed {bed || 0} </Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Baths />
-            <Info>Bath 2</Info>
+            <Info>Bath {bath || 0}</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Garages />
-            <Info>Garage1</Info>
+            <Info>Garage {garage || 0}</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Metrs />
-            <Info>45.2 kv</Info>
+            <Info>{ruller || '45.2 kv'}</Info>
           </Details.Item>
         </Details>
       </Content>

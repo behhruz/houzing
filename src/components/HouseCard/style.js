@@ -8,7 +8,7 @@ import { ReactComponent as Resize } from "../../assets/icons/resize.svg";
 
 const Container = styled.div`
   background: #ffffff;
-  border: 1px solid red;
+  border: 1px solid #e6e9ec;
   border-radius: 3px;
   width: 381px;
   height: 429px;
@@ -47,9 +47,25 @@ Icons.Baths = styled(Bath)``;
 Icons.Garages = styled(Garage)``;
 Icons.Metrs = styled(Metr)``;
 Icons.Resizes = styled(Resize)`
-margin: 0 20px;
+  margin: 0 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  :active {
+    transform: scale(0.8);
+  }
 `;
-Icons.Loves = styled(Love)``;
+Icons.Loves = styled(Love)`
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #f6f8f9;
+  cursor: pointer;
+  :active {
+    transform: scale(0.8);
+  }
+`;
 const Info = styled.div`
   margin: 10px 0 16px 0;
 `;

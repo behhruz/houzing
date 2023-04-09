@@ -3,8 +3,12 @@ import {
   Container,
   Content,
   Details,
+  Footer,
   Icons,
   Img,
+  Info,
+  Line,
+  Liner,
 } from "./style";
 import NoImg from "../../assets/img/noimg.jpeg";
 export const HouseCard = ({ url, title, info }) => {
@@ -18,20 +22,35 @@ export const HouseCard = ({ url, title, info }) => {
         <Details>
           <Details.Item>
             <Icons.Beds />
+            <Info>Bed 1</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Baths />
+            <Info>Bath 2</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Garages />
+            <Info>Garage1</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Metrs />
+            <Info>45.2 kv</Info>
           </Details.Item>
         </Details>
+      </Content>
+      <Liner />
+      <Content footer>
+        <Details.Item footer>
+          <div className="info"> $7,500/mo</div>
+          <div className="subTitle">$2,800/mo</div>
+        </Details.Item>
+        <Details.Item flex>
+          <Icons.Resizes />
+          <Icons.Loves />
+        </Details.Item>
       </Content>
     </Container>
   );

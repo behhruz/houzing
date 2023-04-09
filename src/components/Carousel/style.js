@@ -27,16 +27,32 @@ const ArrowIcon = styled(Arrow)`
   }
   z-index: 6;
 `;
-const BedsIcon = styled(Beds)``;
-const BathIcon = styled(Bath)``;
-const GarageIcon = styled(Garage)``;
-const TriangleIcon = styled(Metr)``;
+const BedsIcon = styled(Beds)`
+  path {
+    fill: white;
+  }
+`;
+const BathIcon = styled(Bath)`
+  path {
+    fill: white;
+  }
+`;
+const GarageIcon = styled(Garage)`
+  path {
+    fill: white;
+  }
+`;
+const TriangleIcon = styled(Metr)`
+  path {
+    fill: white;
+  }
+`;
 const Img = styled.img`
   width: 100%;
   height: 100%;
 `;
 const Blur = styled.div`
-  height: 100% -;
+  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -74,8 +90,8 @@ const Text1 = styled.p`
   color: white;
 `;
 const WrapperIcons = styled.div`
-display: flex;
-gap: 18px;
+  display: flex;
+  gap: 18px;
 `;
 const BoxIcons = styled.div`
   display: flex;

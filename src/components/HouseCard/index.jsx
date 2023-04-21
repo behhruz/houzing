@@ -11,41 +11,58 @@ import {
   Liner,
 } from "./style";
 import NoImg from "../../assets/img/noimg.jpeg";
-export const HouseCard = ({ url, title, info,bed,bath,garage,ruller }) => {
+export const HouseCard = ({ data }) => {
+  const {
+    address,
+    city,
+    country,
+    houseDetails,
+    price,
+    salePrice,
+    attachments,
+  } = data;
+  console.log(data);
   return (
     <Container>
-      <Img src={url || NoImg} />
+      <Img src={attachments[0]?.imgPath || "No img"} />
       <Content>
         {" "}
-        <div className="subTitle">{title || "New Apartment Nice Wiew"}</div>
-        <div className="info">{info || "Quincy St, Brooklyn, NY, USA"}</div>
+        <div className="subTitle">
+          {`${city},${country}` || "New Apartment Nice Wiew"}
+        </div>
+        <div className="info">{address || "Quincy St, Brooklyn, NY, USA"}</div>
         <Details>
           <Details.Item>
             <Icons.Beds />
-            <Info>Bed {bed || 0} </Info>
+            <Info>Bed {houseDetails?.beds || 0} </Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Baths />
-            <Info>Bath {bath || 0}</Info>
+            <Info>Bath {houseDetails?.bath || 0}</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Garages />
-            <Info>Garage {garage || 0}</Info>
+            <Info>Garage {houseDetails?.garage || 0}</Info>
           </Details.Item>
           <Details.Item>
             {" "}
             <Icons.Metrs />
-            <Info>{ruller || '45.2 kv'}</Info>
+            <Info>
+              {`${houseDetails?.area} m` || "45.2 kv"}
+              <sup>2</sup>
+            </Info>
           </Details.Item>
         </Details>
       </Content>
       <Liner />
       <Content footer>
         <Details.Item footer>
-          <div className="info"> $7,500/mo</div>
-          <div className="subTitle">$2,800/mo</div>
+          <div className="info">
+            <del>{price || 0}$/mo</del>{" "}
+          </div>
+          <div className="subTitle">{salePrice}$/mo</div>
         </Details.Item>
         <Details.Item flex>
           <Icons.Resizes />
@@ -55,3 +72,4 @@ export const HouseCard = ({ url, title, info,bed,bath,garage,ruller }) => {
     </Container>
   );
 };
+export default HouseCard;

@@ -33,7 +33,7 @@ export const GenericCarousel = () => {
     if (name === "left") slider.current.next();
   };
   const onChange = (currentSlide) => {
-    console.log(currentSlide);
+    // console.log(currentSlide);
   };
   return (
     <Container>

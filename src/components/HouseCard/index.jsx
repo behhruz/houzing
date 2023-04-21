@@ -20,6 +20,7 @@ export const HouseCard = ({ data }) => {
     price,
     salePrice,
     attachments,
+    description,
   } = data;
   console.log(data);
   return (
@@ -27,8 +28,8 @@ export const HouseCard = ({ data }) => {
       <Img src={attachments[0]?.imgPath || NoImg} />
       <Content>
         {" "}
-        <div className="subTitle">
-          {`${city},${country}` || "New Apartment Nice Wiew"}
+        <div className="subTitle inline">
+          {`${city},${country},${description}` || "New Apartment Nice Wiew"}
         </div>
         <div className="info">{address || "Quincy St, Brooklyn, NY, USA"}</div>
         <Details>

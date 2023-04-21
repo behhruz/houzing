@@ -19,6 +19,7 @@ const Container = styled.div`
 const Img = styled.img`
   width: 100%;
   max-height: 220px;
+  min-height: 220px;
   margin-bottom: 24px;
 `;
 const Content = styled.div`

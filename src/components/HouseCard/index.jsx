@@ -24,7 +24,7 @@ export const HouseCard = ({ data }) => {
   console.log(data);
   return (
     <Container>
-      <Img src={attachments[0]?.imgPath || "No img"} />
+      <Img src={attachments[0]?.imgPath || NoImg} />
       <Content>
         {" "}
         <div className="subTitle">

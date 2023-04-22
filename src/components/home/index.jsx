@@ -18,7 +18,7 @@ export const Home = () => {
         <GenericCarousel />
         <div style={{ display: "flex", flexWrap: "wrap", gap: "30px" }}>
           {data.map((value) => {
-            return <HouseCard data={value} />;
+            return <HouseCard key={value.id} data={value} />;
           })}
         </div>
       </Container>

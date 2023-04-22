@@ -11,7 +11,7 @@ import {
   Liner,
 } from "./style";
 import NoImg from "../../assets/img/noimg.jpeg";
-export const HouseCard = ({ data }) => {
+export const HouseCard = ({ data = {} }) => {
   const {
     address,
     city,
@@ -25,7 +25,7 @@ export const HouseCard = ({ data }) => {
   console.log(data);
   return (
     <Container>
-      <Img src={attachments[0]?.imgPath || NoImg} />
+      <Img src={(attachments && attachments[0]?.imgPath) || NoImg} />
       <Content>
         {" "}
         <div className="subTitle inline">

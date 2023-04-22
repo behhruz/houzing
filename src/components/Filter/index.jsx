@@ -11,9 +11,12 @@ import {
   TextBox,
 } from "./style";
 import { Dropdown } from "antd";
-import useReplace from "../../hooks/useReplace";
+import uzeReplace from "../../hooks/useReplace";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Filter = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const CountryRef = useRef();
   const RegionRef = useRef();
   const CityRef = useRef();
@@ -24,8 +27,10 @@ export const Filter = () => {
   const PriceRef = useRef();
   const MaxPriceRef = useRef();
 
-  const onChange = ({ target: { name, value, placeholder } }) => {
-    console.log(name, value, placeholder);
+  const onChange = ({ target: { name, value } }) => {
+    console.log(name, value);
+    navigate(`${location?.pathname}${uzeReplace(name, value)}`);
+    console.log(location);
   };
   const menu = (
     <MenuWrapper>
@@ -82,7 +87,7 @@ export const Filter = () => {
     </MenuWrapper>
   );
 
-  console.log(useReplace("address", "Tashkent"));
+  // console.log(useReplace("address", "Tashkent"));
   return (
     <>
       <Container>

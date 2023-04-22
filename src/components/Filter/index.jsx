@@ -11,6 +11,7 @@ import {
   TextBox,
 } from "./style";
 import { Dropdown } from "antd";
+import useReplace from "../../hooks/useReplace";
 
 export const Filter = () => {
   const CountryRef = useRef();
@@ -22,6 +23,10 @@ export const Filter = () => {
   const SortRef = useRef();
   const PriceRef = useRef();
   const MaxPriceRef = useRef();
+
+  const onChange = ({ target: { name, value, placeholder } }) => {
+    console.log(name, value, placeholder);
+  };
   const menu = (
     <MenuWrapper>
       <Section>
@@ -29,10 +34,30 @@ export const Filter = () => {
           <h1 className="subTitle">Address</h1>
         </TextBox>
         <InputBox>
-          <GenericInputs ref={CountryRef} placeholder={"Country"} />
-          <GenericInputs ref={RegionRef} placeholder={"Region"} />
-          <GenericInputs ref={CityRef} placeholder={"City"} />
-          <GenericInputs ref={ZipCodeRef} placeholder={"Zip Code"} />
+          <GenericInputs
+            onChange={onChange}
+            ref={CountryRef}
+            placeholder={"Country"}
+            name="country"
+          />
+          <GenericInputs
+            onChange={onChange}
+            ref={RegionRef}
+            placeholder={"Region"}
+            name="region"
+          />
+          <GenericInputs
+            onChange={onChange}
+            ref={CityRef}
+            placeholder={"City"}
+            name="city"
+          />
+          <GenericInputs
+            onChange={onChange}
+            ref={ZipCodeRef}
+            placeholder={"Zip Code"}
+            name="zipCode"
+          />
         </InputBox>
       </Section>
       <Section>
@@ -56,6 +81,8 @@ export const Filter = () => {
       </Section>
     </MenuWrapper>
   );
+
+  console.log(useReplace("address", "Tashkent"));
   return (
     <>
       <Container>

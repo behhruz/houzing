@@ -13,10 +13,12 @@ import {
 import { Dropdown } from "antd";
 import uzeReplace from "../../hooks/useReplace";
 import { useLocation, useNavigate } from "react-router-dom";
+import useSearch from "../../hooks/useSearch";
 
 export const Filter = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const query = useSearch();
   const CountryRef = useRef();
   const RegionRef = useRef();
   const CityRef = useRef();
@@ -26,7 +28,7 @@ export const Filter = () => {
   const SortRef = useRef();
   const PriceRef = useRef();
   const MaxPriceRef = useRef();
-
+  console.log(query.get("country"), "query");
   const onChange = ({ target: { name, value } }) => {
     console.log(name, value);
     navigate(`${location?.pathname}${uzeReplace(name, value)}`);
@@ -40,24 +42,28 @@ export const Filter = () => {
         </TextBox>
         <InputBox>
           <GenericInputs
+            defaultValue={query.get("country")}
             onChange={onChange}
             ref={CountryRef}
             placeholder={"Country"}
             name="country"
           />
           <GenericInputs
+            defaultValue={query.get("region")}
             onChange={onChange}
             ref={RegionRef}
             placeholder={"Region"}
             name="region"
           />
           <GenericInputs
+            defaultValue={query.get("city")}
             onChange={onChange}
             ref={CityRef}
             placeholder={"City"}
             name="city"
           />
           <GenericInputs
+            defaultValue={query.get("zipCode")}
             onChange={onChange}
             ref={ZipCodeRef}
             placeholder={"Zip Code"}

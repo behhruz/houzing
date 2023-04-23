@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as logoImg } from "../../assets/icons/logo.svg";
 const Wrapper = styled.div`
- 
   color: white;
   padding: var(--padding);
   display: flex;
@@ -10,7 +9,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   font-size: 16px;
   height: 64px;
+  width: 100%;
   max-width: 1440px;
+  margin: auto;
 `;
 const Section = styled.nav`
   display: flex;
@@ -45,6 +46,5 @@ const Links = styled(NavLink)`
   padding: 0 32px;
   color: white;
 `;
-
 
 export { Container, Section, Wrapper, Logo, Links, Main };

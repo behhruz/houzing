@@ -9,6 +9,9 @@ const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 const Icons = styled.div``;
 Icons.houseIcon = styled(HouseIcon)`
@@ -28,7 +31,7 @@ Icons.filterIcon = styled(FilterIcon)`
 const MenuWrapper = styled.div`
   padding: 20px 30px;
   background-color: white;
-  border-radius:5px ;
+  border-radius: 5px;
 `;
 const Section = styled.div``;
 const TextBox = styled.div`
